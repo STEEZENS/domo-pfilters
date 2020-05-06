@@ -5,7 +5,7 @@
       class="container-md">
       <router-link
         class="__link"
-        to="/">
+        to="/multi-select">
         Multi-Select
       </router-link>
 

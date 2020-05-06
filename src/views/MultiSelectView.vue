@@ -1,6 +1,6 @@
 <template>
   <div
-    class="HomeView">
+    class="MultiSelectView">
 
     <EmbedBase
       :section="{
@@ -25,7 +25,7 @@ import GLOBAL_COUNTRY_REGIONS from '@/data/global-country-regions';
 import EmbedBase from '@/components/EmbedBase.vue';
 
 export default {
-  name: 'HomeView',
+  name: 'MultiSelectView',
 
   components: {
     EmbedBase,

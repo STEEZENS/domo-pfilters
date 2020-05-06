@@ -6,9 +6,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/HomeView'),
+    path: '/multi-select',
+    name: 'multi-select',
+    component: () => import('@/views/MultiSelectView'),
   },
   {
     path: '/single-select',
@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '*',
-    redirect: '/',
+    redirect: '/multi-select',
   },
 ];
 
