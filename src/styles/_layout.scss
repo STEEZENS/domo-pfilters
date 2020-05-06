@@ -1,0 +1,99 @@
+/** LAYOUT UTILITY CLASSES **/
+
+// Text Alignment
+.text-center {text-align: center;}
+.text-left   {text-align: left;}
+.text-right  {text-align: right;}
+
+// Position
+.relative {position: relative;}
+.absolute {position: absolute;}
+.fixed    {position: fixed;}
+
+// Anchors
+.top    {top: 0;}
+.right  {right: 0;}
+.bottom {bottom: 0;}
+.left   {left: 0;}
+
+// Display
+.block        {display: block;}
+.inline-block {display: inline-block;}
+.inline       {display: inline;}
+.flex         {display: flex;}
+.display-none {display: none;}
+
+// Opacity
+.opacity-0 {opacity: 0;}
+.opacity-1 {opacity: 1;}
+
+// Size
+.width-100  {width: 100%;}
+.height-100 {height: 100%;}
+
+// Overflow
+.overflow-hidden  {overflow: hidden;}
+.overflow-visible {overflow: visible;}
+
+// Alignment
+.v-align-top     {vertical-align: top;}
+.v-align-center  {vertical-align: middle;}
+.v-align-bottom  {vertical-align: bottom;}
+.align-start     {align-items: flex-start;}
+.align-center    {align-items: center;}
+.align-end       {align-items: flex-end;}
+.justify-start   {justify-content: flex-start;}
+.justify-center  {justify-content: center;}
+.justify-end     {justify-content: flex-end;}
+.justify-between {justify-content: space-between;}
+.justify-around  {justify-content: space-around;}
+
+// Direction
+.row-reverse {flex-direction: row-reverse;}
+
+// Containers
+.container-sm {@include container-sm}
+.container-md {@include container-md}
+.container-lg {@include container-lg}
+@include bp-iPhonePlus {
+  .container-md {padding: 0 32px;}
+}
+
+// Padding & Margin
+.pt-section,
+.py-section {
+  padding-top: 40px;
+}
+.pb-section,
+.py-section {
+  padding-bottom: 64px;
+}
+@include bp-iPad {
+  .pt-section,
+  .py-section {
+    padding-top: 50px;
+  }
+  .pb-section,
+  .py-section {
+    padding-bottom: 80px;
+  }
+}
+
+// Padding & Margin Generator
+@each $multiple in $space-multiples {
+  $space-types:   if($multiple == auto, (margin), (padding, margin));
+  $px:            if($multiple == auto, auto, ($multiple * $base-space));
+  $half-label:    if($multiple == .5, half, null);
+  $onehalf-label: if($multiple == 1.5, onehalf, null);
+  $multiple-name: if($multiple == .5 or $multiple == 1.5, null, $multiple);
+  @each $space-type in $space-types {
+    $space-label: if($space-type == padding, p, m);
+    .#{$space-label}-#{$multiple-name}#{$half-label}#{$onehalf-label}   {#{$space-type}: $px;}
+    .#{$space-label}x-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-left: $px; #{$space-type}-right: $px;}
+    .#{$space-label}y-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-top: $px; #{$space-type}-bottom: $px;}
+    .#{$space-label}t-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-top: $px;}
+    .#{$space-label}r-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-right: $px;}
+    .#{$space-label}b-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-bottom: $px;}
+    .#{$space-label}l-#{$multiple-name}#{$half-label}#{$onehalf-label}  {#{$space-type}-left: $px;}
+  }
+}

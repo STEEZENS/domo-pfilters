@@ -1,0 +1,95 @@
+/** CONFIG VARIABLES & MIXINS
+/** Important: This file should NOT output styles, only variables and mixins **/
+
+// Breakpoints
+@mixin bp-iPhone4    {@media only screen and (min-width: 320px) {@content;}}
+@mixin bp-iPhone     {@media only screen and (min-width: 375px) {@content;}}
+@mixin bp-iPhonePlus {@media only screen and (min-width: 414px) {@content;}}
+@mixin bp-iPad       {@media only screen and (min-width: 768px) {@content;}}
+@mixin bp-desktop    {@media only screen and (min-width: 1100px) {@content;}}
+
+// Spacing
+$base-space: 8px;
+$space-multiples: (auto, 0, .5, 1, 1.5, 2, 3, 4, 5);
+
+// Colors
+$white:        #FFFFFF;
+$light:        #F6F6F6;
+$border-color: #D8D8D8;
+$grey:         #E8E8E8;
+$mute:         #999999;
+$dark:         #333333;
+$black:        #000000;
+$dark-blue:    #4B87B0;
+$light-blue:   #99CCEE;
+$red:          #E4584F;
+$green:        #55DD77;
+$orange:       #FC9927;
+
+// Gradients
+@mixin brand-gradient {
+  background: $light-blue;
+  background: linear-gradient(to bottom right, $dark-blue, $light-blue);
+}
+
+// Important Sizes
+$header-height: 60px;
+
+// Line Heights
+$line-height: 1.5;
+$line-height-title: 1.2;
+
+// Font Weights
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-semi-bold: 600;
+$font-weight-bold:      700;
+
+// Font Sizes (mobile)
+$body-size-mobile: 14px;
+$h1-size-mobile:   22px;
+$h2-size-mobile:   22px;
+$h3-size-mobile:   20px;
+$h4-size-mobile:   18px;
+$h5-size-mobile:   16px;
+$h6-size-mobile:   14px;
+
+// Font Sizes (desktop)
+$body-size-desktop: 16px;
+$h1-size-desktop:   36px;
+$h2-size-desktop:   32px;
+$h3-size-desktop:   24px;
+$h4-size-desktop:   18px;
+$h5-size-desktop:   16px;
+$h6-size-desktop:   14px;
+
+// Border
+$border-width: 1px;
+$border:       $border-width solid $border-color;
+
+// Radii
+$radius: 4px;
+
+// Buttons
+$button-height-small:  26px;
+$button-height-medium: 38px;
+
+// Containers
+@mixin container-sm {
+  max-width:     800px;
+  margin-left:   auto;
+  margin-right:  auto;
+  padding: 0 5%;
+}
+@mixin container-md {
+  max-width:     1306px;
+  margin-left:   auto;
+  margin-right:  auto;
+  padding: 0 24px;
+}
+@mixin container-lg {
+  max-width:     1800px;
+  margin-left:   auto;
+  margin-right:  auto;
+  padding: 0 5%;
+}

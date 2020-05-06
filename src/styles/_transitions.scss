@@ -1,0 +1,20 @@
+// Page (targets all pages)
+// @NOTE deactivate for now (enable if you want it)
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease 0s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+// Fade
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease 0s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

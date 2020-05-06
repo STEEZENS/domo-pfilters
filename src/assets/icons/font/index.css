@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'covid';
+  src:
+    url('./covid.ttf?35wrkn') format('truetype'),
+    url('./covid.woff?35wrkn') format('woff'),
+    url('./covid.svg?35wrkn#covid') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'covid' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-x-circle:before {
+  content: "\e913";
+}
+.icon-search:before {
+  content: "\e914";
+}
+.icon-linkedin:before {
+  content: "\e90d";
+}
+.icon-twitter:before {
+  content: "\e90f";
+}
+.icon-analytics-presentation:before {
+  content: "\e900";
+}
+.icon-bell:before {
+  content: "\e901";
+}
+.icon-caret-down:before {
+  content: "\e902";
+}
+.icon-caret-left:before {
+  content: "\e903";
+}
+.icon-caret-right:before {
+  content: "\e904";
+}
+.icon-caret-up:before {
+  content: "\e905";
+}
+.icon-check:before {
+  content: "\e906";
+}
+.icon-code-tags:before {
+  content: "\e907";
+}
+.icon-database-connect:before {
+  content: "\e908";
+}
+.icon-database-remote:before {
+  content: "\e909";
+}
+.icon-domo:before {
+  content: "\e90a";
+}
+.icon-facebook:before {
+  content: "\e90b";
+}
+.icon-file-code-tags:before {
+  content: "\e90c";
+}
+.icon-terminal:before {
+  content: "\e90e";
+}
+.icon-users-circle:before {
+  content: "\e910";
+}
+.icon-x:before {
+  content: "\e911";
+}
+.icon-youtube:before {
+  content: "\e912";
+}

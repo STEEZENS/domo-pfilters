@@ -1,0 +1,115 @@
+/** THEME UTILITY DECLARATIONS & CLASSES **/
+
+html {
+  background-color: $white;
+}
+
+body {
+  color: $dark;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $body-size-mobile;
+  line-height: $line-height;
+}
+@include bp-iPad {
+  body {font-size: $body-size-desktop;}
+}
+
+// Titles
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+  line-height: $line-height-title;
+  letter-spacing: -0.3px;
+}
+h1, .h1 {font-size: $h1-size-mobile;}
+h2, .h2 {font-size: $h2-size-mobile;}
+h3, .h3 {font-size: $h3-size-mobile;}
+h4, .h4 {font-size: $h4-size-mobile;}
+h5, .h5 {font-size: $h5-size-mobile;}
+h6, .h6 {font-size: $h6-size-mobile;}
+@include bp-iPad {
+  h1, .h1 {font-size: $h1-size-desktop;}
+  h2, .h2 {font-size: $h2-size-desktop;}
+  h3, .h3 {font-size: $h3-size-desktop;}
+  h4, .h4 {font-size: $h4-size-desktop;}
+  h5, .h5 {font-size: $h5-size-desktop;}
+  h6, .h6 {font-size: $h6-size-desktop;}
+}
+
+// Backgrounds
+.bg-transparent    {background: transparent;}
+.bg-white          {background: $white;}
+.bg-light          {background: $light;}
+.bg-dark           {background: $dark;}
+.bg-light-blue     {background: $light-blue;}
+.bg-brand-gradient  {@include brand-gradient();}
+
+// Text Color
+.color-white  {color: $white;}
+.color-mute   {color: $mute;}
+.color-dark   {color: $dark;}
+.color-light-blue {color: $light-blue;}
+.color-dark-blue  {color: $dark-blue;}
+.color-red    {color: $red;}
+.color-green  {color: $green;}
+.color-orange {color: $orange;}
+
+// Font Weight
+.font-light     {font-weight: $font-weight-light;}
+.font-normal    {font-weight: $font-weight-normal;}
+.font-semi-bold {font-weight: $font-weight-semi-bold;}
+.font-bold      {font-weight: $font-weight-bold;}
+
+// Font Size
+.font-12 {font-size: 12px;}
+.font-14 {font-size: 14px;}
+.font-16 {font-size: 16px;}
+.font-18 {font-size: 18px;}
+.font-14-16 {font-size: 14px;}
+.font-16-18 {font-size: 16px;}
+@include bp-iPad {
+  .font-14-16 {font-size: 16px;}
+  .font-16-18 {font-size: 18px;}
+}
+
+// Borders
+.border        {border: $border;}
+.border-top    {border-top: $border;}
+.border-right  {border-right: $border;}
+.border-bottom {border-bottom: $border;}
+.border-left   {border-left: $border;}
+
+// Text Transforms
+.uppercase  {text-transform: uppercase;}
+.capitalize {text-transform: capitalize;}
+.italic     {font-style: italic;}
+
+// Text Decorations
+.underline {text-decoration: underline;}
+
+// Links
+.link:hover {text-decoration: underline;}
+
+// Radii
+.radius    {border-radius: $radius;}
+.radius-50 {border-radius: 50%;}
+
+// Cursor
+.cursor-pointer {cursor: pointer;}
+
+// Icons
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
